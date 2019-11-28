@@ -7,7 +7,7 @@ A sample Dockerfile for Apache Spark working with Apache Livy and additional ver
 
 ```sh
 git clone https://github.com/Yuhsak/docker-spark-livy-python3.git
-``
+```
 
 2. Build image & Run container
 
