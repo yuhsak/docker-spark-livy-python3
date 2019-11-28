@@ -6,9 +6,9 @@ services:
       dockerfile: Dockerfile
     image: spark-livy:2.4.4
     ports:
-      - 4040:4040
-      - 8080:8080
-      - 8998:8998
+      - '7077:7077'
+      - '8080:8080'
+      - '8998:8998'
     command: bash -c "/livy/bin/livy-server start && /spark/bin/spark-class org.apache.spark.deploy.master.Master --host 0.0.0.0"
   worker:
     image: spark-livy:2.4.4

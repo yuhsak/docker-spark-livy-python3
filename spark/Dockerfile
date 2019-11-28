@@ -46,8 +46,14 @@ RUN \
 	&& rm -r ${PYTHON_VERSION_STRING} \
 	&& apt clean
 
-# Configure
+## Configure
 COPY livy.conf ${LIVY_HOME}/conf
 COPY spark-env.sh ${SPARK_HOME}/conf
 
+## Ports
+# Spark Master
+EXPOSE 7077
+# Master Web UI
 EXPOSE 8080
+# Master Livy
+EXPOSE 8998
